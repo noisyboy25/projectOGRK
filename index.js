@@ -1,7 +1,13 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const fs = require('fs');
-const config = JSON.parse(fs.readFileSync('./config.json', 'utf8'));
+
+try {
+    var config = JSON.parse(fs.readFileSync('./config.json', 'utf8'));
+} catch (error) {
+    fs.writeFileSync('config.json', '{\n\t"prefix":"-",\n\t"token":""\n}');
+    console.log("WARNING: Default config.json file created!\n\t Please set the Discord token!");
+}
 
 const log = (message) => {
     var date = new Date();
