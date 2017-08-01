@@ -1,0 +1,23 @@
+{
+  "name": "project-ogrk",
+  "version": "1.0.0",
+  "description": "Bot for TOPka Discord-server",
+  "main": "index.js",
+  "dependencies": {
+    "discord.js":"^11.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/noisyboy25/projectOGRK.git"
+  },
+  "author": "Andrey Yudin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/noisyboy25/projectOGRK/issues"
+  },
+  "homepage": "https://github.com/noisyboy25/projectOGRK#readme"
+}
