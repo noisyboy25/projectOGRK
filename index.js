@@ -11,8 +11,30 @@ try {
 
 const log = (message) => {
     var date = new Date();
-    var time = `${date.getHours()}:${date.getMinutes()}`
-    console.log(`${time} [${message.guild.name}][${message.channel.name}] ${message.author.tag}: ${message.content}`);
+    var time = `${date.getHours()}:${date.getMinutes()}`;
+    
+    let _channelType = message.channel.type;
+
+    switch (_channelType) {
+    	case 'dm':
+    		console.log(`${time} `+
+			`${message.author.tag}:`+
+			` ${message.content}`);
+		break;
+	case 'text':
+		console.log(`${time} `+
+			`[${message.guild.name}]`+
+			`[${message.channel.name}]`+
+			` ${message.author.tag}:`+
+			` ${message.content}`);
+		break;
+	default:
+		console.log(`${time} `+
+			`[${message.channel.name}]`+
+			` ${message.author.tag}:`+
+			` ${message.content}`);
+    }
+
 }
 
 client.on('ready', () => {
