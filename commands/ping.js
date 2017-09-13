@@ -1,3 +1,3 @@
-exports.run = (client, message) => {
-    message.reply("pong!");
+exports.run = (options) => {
+    options.message.reply("pong!");
 }

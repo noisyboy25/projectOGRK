@@ -4,7 +4,9 @@
   "description": "Bot for TOPka Discord-server",
   "main": "index.js",
   "dependencies": {
-    "discord.js":"^11.1.0"
+    "discord.js": "^11.1.0",
+    "ffmpeg": "0.0.4",
+    "ytdl": "^0.7.0"
   },
   "devDependencies": {},
   "scripts": {

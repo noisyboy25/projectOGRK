@@ -51,7 +51,12 @@ client.on('message', (message) => {
 
     try {
         let commandFile = require(`./commands/${command}.js`);
-        commandFile.run(client, message, args)
+        let options = {
+            client: client,
+            message: message,
+            args: args
+        }
+        commandFile.run(options);
         console.log(`<${command}>`);
     } catch (error) {
         console.error(error);
