@@ -17,6 +17,7 @@ exports.run = (options) => {
             for (const connection of client.voiceConnections.values()) {
                 connection.playBroadcast(broadcast);
             }
+            stream.once('end', () => voiceChannel.leave());
         }).catch((e) => {
             message.reply("Bad link!");
             voiceChannel.leave();
